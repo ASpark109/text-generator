@@ -1,0 +1,105 @@
+body
+{
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+#containerLeft, #containerRight
+{
+    flex: 1;
+}
+
+#containerLeft
+{
+    position: relative;
+    background-color: #040f1d;
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок */
+    align-content: flex-start; /* Починає вирівнювання з верхнього лівого кута */
+    padding: 30px; /* Відступ всередині контейнера */
+}
+
+#containerRight
+{
+    position: relative;
+    background-color: #06192e; /* Стиль для правого контейнера */
+    padding: 30px; /* Відступ всередині контейнера */
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#generateDocx {
+    position: absolute; /* Абсолютне позиціонування відносно батьківського елемента */
+    bottom: 20px; /* Відступ від нижнього краю */
+    right: 20px; /* Відступ від правого краю */
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#generateDocx:hover
+{
+    background-color: #65bdf8;
+}
+
+#modal
+{
+    position: absolute;
+    top: 50%; /* Центрування по вертикалі */
+    left: 50%; /* Центрування по горизонталі */
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+    /* height: 200px; */
+    background-color: #203a4c;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column; /* Встановлює напрямок колонкою (вертикально) */
+    gap: 10px; /* Додає відстань між елементами */
+}
+#modalContent
+{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Встановлює напрямок колонкою (вертикально) */
+    gap: 10px; /* Додає відстань між елементами */
+}
+
+.inputValue
+{
+    border-radius: 3px;
+    height: 20px;
+    border: 0;
+}
+
+.btn {
+    width: 150px; /* Ширина кнопки */
+    height: 50px; /* Висота кнопки */
+    background-color: #203a4c; /* Основний колір кнопки (блакитний) */
+    color: white; /* Колір тексту */
+    border: none; /* Прибираємо стандартну обводку */
+    border-radius: 10px; /* Заокруглені краї */
+    cursor: pointer; /* Курсор у вигляді руки */
+    font-size: 16px; /* Розмір шрифту */
+    font-weight: bold; /* Жирний текст */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Ефект плавного переходу при наведенні */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для кнопки */
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+/* Ефект при наведенні на кнопку */
+.btn:hover {
+    background-color: #d09f7c; /* Змінюємо колір на зелений при наведенні */
+    transform: scale(1.02); /* Легке збільшення кнопки */
+}
